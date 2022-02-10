@@ -1,0 +1,24 @@
+.colorChangers {
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: flex-end;
+}
+
+.colorChangers > li {
+    height: 24px;
+    width: 24px;
+    border-radius: 48px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#colorChangerOne {
+    background-color: black;
+}
+
+#colorChangerTwo {
+    background-color: #4b5320;
+}
