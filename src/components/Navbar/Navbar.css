@@ -38,3 +38,7 @@
 .testbottom {
     background-image: linear-gradient(#004e7e, #165391);
 }
+
+#banner {
+    cursor: pointer;
+}

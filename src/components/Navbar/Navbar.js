@@ -3,29 +3,20 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-// import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import MenuIcon from '@mui/icons-material/Menu';
-// import SearchBar from "material-ui-search-bar";
-// import Logo from '../../images/CoStoreLogo.png'
-// import { makeStyles } from '@mui/styles';
-
-// const useStyles = makeStyles((theme) => ({
-//   abRoot: {
-//     backgroundColor: "red"
-//   }
-// })
-// );
+import Button from '@mui/material/Button';
+// import IconButton from '@mui/material/IconButton';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+// import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Navbar() {
 
   return (
     
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position='static' style={{backgroundColor: 'black', boxShadow: 'none'}}>
+    <Box>
+      <AppBar position='relative' sx={{backgroundColor: 'black'}}>
         <Toolbar>
-          <IconButton
+
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
@@ -33,25 +24,30 @@ export default function Navbar() {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, mt: 1}}>
-            <img src="https://www.promoplace.com/ws/ws.dll/CoStoreLogo?UN=109646&Type=L&Store=11667&Age=1386893529&MaxW=800&MaxH=75" alt='MAI banner'></img>
-          </Typography>
-          {/* <Button color="inherit">Login</Button> */}
-          {/* <SearchBar
-          /> */}
-          <div>
-          {/* <SearchBar sx={{height: 'auto', width: 'auto'}}></SearchBar> */}
-          <IconButton
+          </IconButton> */}
+
+          <Box sx={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', flex: '1'}}>
+
+            <Button href='/planner' size="small" sx={{textTransform: 'none', backgroundColor: 'rgb(33, 33, 33)', color: 'white', padding: '16px 24px', fontSize: '12px', fontWeight: '600'}}>Timesheet</Button>
+
+            <Typography variant="h6" component="div" sx={{  mt: 1}}>
+              <a href='/'><img src="https://www.bestpromoandapparel.com/we/we.dll/Pic?UN=109646&F=C&T=707&Age=1313639451" alt='MAI banner'></img></a>
+            </Typography>
+
+            <Button href='/inventory' size="small" sx={{textTransform: 'none', backgroundColor: 'rgb(33, 33, 33)', color: 'white', padding: '16px 24px', fontSize: '12px', fontWeight: '600'}}>Inventory</Button>
+
+          </Box>
+
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <ShoppingCartIcon />
-          </IconButton>
-          </div>
+            <AccountCircleIcon />
+          </IconButton> */}
+
         </Toolbar>
       </AppBar>
     </Box>

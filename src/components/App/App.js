@@ -1,61 +1,26 @@
-// import logo from '../../images/logo.svg';
 import './/App.css';
 import Navbar from '../Navbar/Navbar';
-import TestCard from '../Cards/TestCard';
-import TestCardTwo from '../Cards/TestCardTwo';
-import TestCardThree from '../Cards/TestCardThree';
+import Planner from '../Calendar/Planner';
+import Inventory from '../Inventory/Inventory';
 import React from 'react';
-import BottomNavbar from '../Navbar/BottomNavbar';
-import NewsletterNavbar from '../Navbar/NewsletterNavbar';
-import { Box } from '@mui/material';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
+        <Navbar></Navbar>
+        <Switch>
+          <Route path='/planner'>
+            <Planner></Planner>
+          </Route>
 
-      <Navbar></Navbar>
-
-      <Box className='cardContainer'>
-
-        <div className='testCards'>
-          <TestCard></TestCard>
-          <TestCardTwo></TestCardTwo>
-          <TestCardThree></TestCardThree>
-        </div>
-
-        <div className='testCards'>
-          <TestCard></TestCard>
-          <TestCardTwo></TestCardTwo>
-          <TestCardThree></TestCardThree>
-        </div>
-
-        <div className='testCards'>
-          <TestCard></TestCard>
-          <TestCardTwo></TestCardTwo>
-          <TestCardThree></TestCardThree>
-        </div>
-
-        <div className='testCards'>
-          <TestCard></TestCard>
-          <TestCardTwo></TestCardTwo>
-          <TestCardThree></TestCardThree>
-        </div>
-
-        <div className='testCards'>
-          <TestCard></TestCard>
-          <TestCardTwo></TestCardTwo>
-          <TestCardThree></TestCardThree>
-        </div>
-
-      </Box>
-      <NewsletterNavbar></NewsletterNavbar>
-      <BottomNavbar></BottomNavbar>
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header> */}
-
-    </div>
+          <Route path='/inventory'>
+            <Inventory></Inventory>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
